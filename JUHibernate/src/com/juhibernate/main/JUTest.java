@@ -16,6 +16,7 @@ import com.juhibernate.crud.JUCrud;
 import com.juhibernate.crud.JUOSearch;
 import com.juhibernate.crud.JUSelect;
 import com.juhibernate.crypto.JUEncoder;
+import com.juhibernate.oper.JUOperate;
 import com.juhibernate.sdb.JUHData;
 import com.juhibernate.user.JUSUser;
 import com.juhibernate.user.JUSUserDetails;
@@ -83,6 +84,7 @@ public class JUTest {
 				JUSUser.setSystemUser(userDataObj.get(0).getId(), userDataObj.get(0).getUser_authencity(),
 						userDataObj.get(0).getLocation());
 				System.out.println("Hurrah!!! Login successful...");
+				new JUOperate().selectOperation();
 			} else {
 				System.out.println("Ooops!!! Incorrect Password!!! Login failed... Try Again");
 				checkingAuthentication(JUDBCConnect.createConnection(null));
