@@ -22,3 +22,9 @@ run: java -jar setup.jar
 
 <img src=https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/images/login.png>
 
+
+# Code Sample
+
+<img src=https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/images/auth.png>
+
+Full Code: 
