@@ -27,4 +27,4 @@ run: java -jar setup.jar
 
 <img src=https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/images/auth.png>
 
-Full Code: 
+Full Code: https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/src/com/juhibernate/main/JUTest.java
