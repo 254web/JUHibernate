@@ -12,5 +12,5 @@ run: cd 'preffered directory'/JUHibernate1/JUHibernate1
 
 run: java -jar setup.jar
 
-https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/images/login.png
+<img src=https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/images/login.png>
 
