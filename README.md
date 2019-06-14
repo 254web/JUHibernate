@@ -14,7 +14,7 @@ run: java -jar setup.jar
 
 <img src=https://github.com/UCreations/JUHibernate/blob/master/JUHibernate/images/login.png>
 
-<b>User Name<b/> User 
+<b>User Name:<b/> <normal>User</normal> 
   
-<b>Password</b> Password123
+<b>Password:</b> <normal>Password123</normal>
 
