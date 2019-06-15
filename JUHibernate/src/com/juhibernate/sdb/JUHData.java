@@ -87,7 +87,7 @@ public class JUHData {
 	}
 
 	public interface Unique_Box {
-		String UNIQUE_BOX = "abs2030.";
+		String UNIQUE_BOX = "ju2019.";
 	}
 
 	private String id;

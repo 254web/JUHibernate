@@ -22,7 +22,7 @@ public class JUKey {
 		try {
 
 			if (JUOSearch.searchTable(JUDBCConnect.createConnection(infoTextField), tableName, infoTextField)
-					.next()) {
+					.next() == true) {
 
 				final ResultSet resultSetObj = JUSelect.getRecords(JUDBCConnect.createConnection(infoTextField),
 						tableName, infoTextField);

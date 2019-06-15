@@ -26,7 +26,7 @@ public class JUOperate {
 		try {
 			switch (scannerObj.nextInt()) {
 			case 1:
-				System.out.println("Add User Selected");
+				new JUAdd().getUserData();
 				break;
 
 			default:
