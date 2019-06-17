@@ -12,7 +12,7 @@ import com.juhibernate.sdb.JUHData;
 import com.juhibernate.user.JUSUser;
 
 /**
- * @author root
+ * @author JMchfundi
  *
  */
 public class JUAdd {
@@ -60,6 +60,7 @@ public class JUAdd {
 		}
 
 		selectionIndex = scannerObj.nextInt();
+
 		switch (selectionIndex) {
 		case 1:
 
@@ -72,7 +73,7 @@ public class JUAdd {
 			break;
 
 		default:
-
+			operation(mapObj, dataObj);
 			break;
 		}
 	}
