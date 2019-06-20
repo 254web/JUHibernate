@@ -8,6 +8,8 @@ import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.juhibernate.util.JUError;
+
 /**
  * @author root
  *
@@ -30,7 +32,7 @@ public class JUOperate {
 				break;
 
 			default:
-				System.out.println("Invalid Selection/Not Yet Implemented");
+				System.out.println(JUError.SELECT_ERROR);
 				selectOperation();
 				break;
 			}

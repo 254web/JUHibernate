@@ -37,6 +37,10 @@ public class JUTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		lunch();
+	}
+
+	public static void lunch() {
 		JUdbSS.dbStart();
 		try {
 			utilObj = new JUtil<JUHData>(JUHData.class);
@@ -60,9 +64,10 @@ public class JUTest {
 				saveSalesObj();
 				checkingAuthentication(JUDBCConnect.createConnection(null));
 			}
-		} catch (final SQLException e) {
+		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
+
 	}
 
 	private static void checkingAuthentication(Connection conObj) {
@@ -71,11 +76,20 @@ public class JUTest {
 
 		System.out.println("Authentication Required... Please give login credentials:...");
 		System.out.println("User Name:\n");
-		final String usrName = scannerObj.nextLine();
-		System.out.println("Password:\n");
-		final String pswd = scannerObj.nextLine();
+		String usrName = scannerObj.nextLine();
+		if (!(usrName.toString().length() >= 1)) {
+			System.out.println("Cant Operate With Null User");
+			checkingAuthentication(conObj);
+		}
 
-		final List<JUHData> userDataObj = JUHData.GEP_User_DataList
+		System.out.println("Password:\n");
+		String pswd = scannerObj.nextLine();
+		if (!(pswd.toString().length() >= 1)) {
+			System.out.println("Cant Operate With Null Password");
+			checkingAuthentication(conObj);
+		}
+
+		List<JUHData> userDataObj = JUHData.GEP_User_DataList
 				.createList(JDBCUSelect.selectRecordFromTable(JUDBCConnect.createConnection(null),
 						JUHData.TableName.TABLENAME, "id", JUEncoder.encodeData(usrName)), null);
 
@@ -98,9 +112,8 @@ public class JUTest {
 	private static void saveSalesObj() {
 		try {
 			new JUCrud(JUSUserDetails.getUserDataEntries(), utilObj.getSessionFactory()).saveObject();
-		} catch (final Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-
 	}
 }

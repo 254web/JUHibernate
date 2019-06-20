@@ -12,7 +12,7 @@ public class JUdbSS {
 				Runtime.getRuntime().exec("./startdb");
 
 			} else
-				Runtime.getRuntime().exec("cmd /k startdb.bat");
+				Runtime.getRuntime().exec("cmd /k start startdb.bat");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
@@ -26,7 +26,7 @@ public class JUdbSS {
 				Runtime.getRuntime().exec("chmod +x stopdb");
 				Runtime.getRuntime().exec("./stopdb");
 			} else
-				Runtime.getRuntime().exec("cmd /k stopdb.bat");
+				Runtime.getRuntime().exec("cmd /k start stopdb.bat");
 		} catch (final IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());

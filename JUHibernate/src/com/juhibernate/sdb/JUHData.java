@@ -26,7 +26,7 @@ public class JUHData {
 
 		public static List<JUHData> createList(ResultSet resultSetObj, JTextField infoTextField) {
 
-			listObj = new LinkedList();
+			listObj = new LinkedList<JUHData>();
 
 			try {
 				while (resultSetObj.next()) {
@@ -37,7 +37,7 @@ public class JUHData {
 					dataObj.setWord(JUDecoder.decodeData(resultSetObj.getObject("word").toString()));
 					dataObj.setLocation(JUDecoder.decodeData(resultSetObj.getObject("location").toString()));
 					dataObj.setCreator(JUDecoder.decodeData(resultSetObj.getObject("creator").toString()));
-					dataObj.setActive_mult(JUDecoder.decodeData(resultSetObj.getObject("active_mult").toString()));
+					dataObj.setActive_mult(resultSetObj.getInt("active_mult"));
 					dataObj.setLast_log(resultSetObj.getDate("last_log"));
 					dataObj.setUser_authencity(
 							JUDecoder.decodeData(resultSetObj.getObject("user_authencity").toString()));
@@ -68,7 +68,7 @@ public class JUHData {
 					dataObj.setWord(resultSetObj.getObject("word").toString());
 					dataObj.setLocation(resultSetObj.getObject("location").toString());
 					dataObj.setCreator(resultSetObj.getObject("creator").toString());
-					dataObj.setActive_mult(resultSetObj.getObject("active_mult").toString());
+					dataObj.setActive_mult(Integer.parseInt(resultSetObj.getObject("active_mult").toString()));
 					dataObj.setLast_log(resultSetObj.getDate("last_log"));
 					dataObj.setUser_authencity(resultSetObj.getObject("user_authencity").toString());
 
@@ -88,6 +88,7 @@ public class JUHData {
 
 	public interface Unique_Box {
 		String UNIQUE_BOX = "ju2019.";
+		String DEFAUL_WORD = "Password123";
 	}
 
 	private String id;
@@ -97,13 +98,13 @@ public class JUHData {
 
 	private String creator;
 
-	private String active_mult;
+	private int active_mult;
 
 	private Date last_log;
 
 	private String user_authencity;
 
-	public String getActive_mult() {
+	public int getActive_mult() {
 		return active_mult;
 	}
 
@@ -136,7 +137,7 @@ public class JUHData {
 		return word;
 	}
 
-	public void setActive_mult(String active_mult) {
+	public void setActive_mult(int active_mult) {
 		this.active_mult = active_mult;
 	}
 

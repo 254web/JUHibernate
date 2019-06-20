@@ -33,10 +33,10 @@ public class JUCrud {
 
 		try {
 			transactionObj.commit();
-		} catch (final Exception e) {
+		} catch (Exception e) {
 			transactionObj.rollback();
-			JOptionPane.showMessageDialog(null, e.getMessage(), new JUCrud().getClass().getSimpleName(),
-					JOptionPane.ERROR_MESSAGE);
+
+			System.out.println(e.getMessage());
 		}
 
 		sessionObj.close();
@@ -53,7 +53,7 @@ public class JUCrud {
 
 			JOptionPane.showMessageDialog(null, "Updation Succeded Successfully",
 					new JUCrud().getClass().getSimpleName(), JOptionPane.INFORMATION_MESSAGE);
-		} catch (final Exception e) {
+		} catch (Exception e) {
 			transactionObj.rollback();
 			JOptionPane.showMessageDialog(null, e.getMessage(), new JUCrud().getClass().getSimpleName(),
 					JOptionPane.ERROR_MESSAGE);

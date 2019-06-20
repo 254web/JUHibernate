@@ -16,7 +16,7 @@ public class JUSUserDetails {
 		userData.setWord(JUEncoder.encodeData("Password123"));
 		userData.setLocation(JUEncoder.encodeData("Parent User"));
 		userData.setCreator(JUEncoder.encodeData("Parent User"));
-		userData.setActive_mult(JUEncoder.encodeData("0"));
+		userData.setActive_mult(0);
 		userData.setLast_log(JUUtilDateToSqlDate.convertUtilToSqlDate(new Date().toString()));
 		userData.setUser_authencity(JUEncoder.encodeData(JUSUser.GetUserAutho.ADMIN));
 
