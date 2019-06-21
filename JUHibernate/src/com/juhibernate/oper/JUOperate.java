@@ -31,6 +31,9 @@ public class JUOperate {
 				new JUAdd().getUserData();
 				break;
 
+			case 4:
+				new JUView().viewUserData();
+				break;
 			default:
 				System.out.println(JUError.SELECT_ERROR);
 				selectOperation();
@@ -51,6 +54,7 @@ public class JUOperate {
 		mapObj.put(1, "Add User");
 		mapObj.put(2, "Update User");
 		mapObj.put(3, "Delet User");
+		mapObj.put(4, "View Users");
 
 		for (Map.Entry<Integer, String> operation : mapObj.entrySet()) {
 			System.out.println(operation.getKey() + " " + operation.getValue());
